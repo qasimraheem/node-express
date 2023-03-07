@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 
 var app = express();
 
-const uri = "";
+const uri = "mongodb://qasim:qasim1234@abdulla-shard-00-00.eftvp.mongodb.net:27017,abdulla-shard-00-01.eftvp.mongodb.net:27017,abdulla-shard-00-02.eftvp.mongodb.net:27017/ioffer?ssl=true&replicaSet=abdulla-shard-0&authSource=admin&retryWrites=true&w=majority";
 mongoose.connect(uri);
 mongoose.set('debug', true);
 mongoose.Promise = global.Promise;

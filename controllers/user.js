@@ -6,7 +6,12 @@ module.exports = {
    res.json({users})
  },
   create:async(req, res)=>{
-
-    res.json({users})
+   console.log("creating user")
+    let user  = await User({
+      ...req.body,
+    });
+    console.log("user:", user)
+    await user.save();
+    res.json({user})
   },
 }
